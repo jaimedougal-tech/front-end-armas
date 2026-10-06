@@ -1,0 +1,207 @@
+/* Estilos para el encabezado (header) */
+header {
+    background-color: #2c3e50; /* Un color de fondo oscuro (azul grisáceo) */
+    color: white; /* Color de la fuente blanco para que resalte */
+    font-family: 'Arial', sans-serif; /* Cambiamos el tipo de fuente */
+    text-align: center; /* Centramos el texto y la imagen */
+    padding: 20px; /* Le damos un poco de espacio interior (aire) */
+}
+
+/* Estilos para el pie de página (footer) */
+footer {
+    background-color: #34495e; /* Un tono un poco más claro para el fondo */
+    color: #ecf0f1; /* Un color blanco humo para la fuente */
+    font-family: 'Arial', sans-serif; 
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px; /* Empuja el pie de página hacia abajo para separarlo del resto */
+}
+
+/* --- ESTILOS PARA EL MENÚ DE NAVEGACIÓN --- */
+
+/* 1. Fondo del menú */
+nav {
+    background-color: #e67e22; /* Color de fondo naranja (puedes cambiarlo si quieres) */
+    padding: 10px 0; /* Un poco de espacio arriba y abajo */
+}
+
+/* 2. Quitar las viñetas a la lista desordenada */
+.nav-list {
+    list-style: none; /* Esta es la propiedad que quita los puntitos negros */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centramos el menú en la pantalla */
+}
+
+/* Hacemos que los elementos de la lista se coloquen uno al lado del otro */
+.nav-list li {
+    display: inline-block; 
+    margin: 0 15px; /* Espacio entre cada botón del menú */
+}
+
+/* 3. Quitar el subrayado a los enlaces y cambiarles el color */
+.nav-list a {
+    text-decoration: none; /* Esta es la propiedad que quita la línea debajo del texto */
+    color: white; /* Color del texto del enlace */
+    font-family: 'Arial', sans-serif;
+    font-weight: bold; /* Ponemos la letra en negrita */
+}
+
+/* Opcional: Efecto visual cuando pasas el mouse por encima del enlace */
+.nav-list a:hover {
+    color: #2c3e50; /* Cambia a color oscuro al pasar el cursor */
+}
+/* Estilos generales para toda la página */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0; /* Aprovechamos para quitar los bordes blancos que los navegadores ponen por defecto */
+}
+/* Confirmamos los fondos personalizados del header y footer */
+header {
+    background-color: #2c3e50; 
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer {
+    background-color: #34495e; 
+    color: #ecf0f1;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* --- ESTILOS PARA LOS ICONOS DE REDES SOCIALES --- */
+.redes-sociales {
+    margin-top: 15px; /* Separa los iconos del texto de tu nombre */
+}
+
+.redes-sociales a {
+    color: white; /* Color inicial de los iconos */
+    font-size: 24px; /* Tamaño del icono */
+    margin: 0 15px; /* Espacio entre los iconos */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    transition: color 0.3s ease; /* Hace que el cambio de color sea suave */
+}
+
+/* Efecto al pasar el mouse por encima (Hover) */
+.redes-sociales a:hover {
+    color: #e67e22; /* Cambia al color naranja de tu menú de navegación */
+}
+/* --- ESTILOS PARA LAS TARJETAS DE PRODUCTO --- */
+
+.productos {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Flexbox para alinear las tarjetas una al lado de la otra */
+.contenedor-tarjetas {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espacio entre cada tarjeta */
+    flex-wrap: wrap; /* Si la pantalla es pequeña, las tarjetas bajan a la siguiente línea */
+    margin-top: 20px;
+}
+
+/* Estilo individual de cada tarjeta (article) */
+.tarjeta {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px;
+    width: 280px; /* Ancho fijo para todas las tarjetas */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Una sombra suave para dar efecto 3D */
+    transition: transform 0.3s ease; /* Transición suave para cuando pasemos el mouse */
+}
+
+/* Efecto para que la tarjeta "salte" un poquito al pasar el cursor */
+.tarjeta:hover {
+    transform: translateY(-10px);
+}
+
+/* Estilo de la imagen del producto */
+.img-producto {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Como aplicamos Poppins al body, el h3 ya hereda la fuente externa. 
+   Solo le damos un color oscuro. */
+.tarjeta h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.tarjeta p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Precio destacado en color naranja y más grande */
+.precio {
+    font-size: 24px !important;
+    font-weight: bold;
+    color: #e67e22 !important;
+}
+
+/* Estilos del botón Agregar al carrito */
+.btn-carrito {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%; /* El botón ocupa todo el ancho de la tarjeta */
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* El ícono de Font Awesome dentro del botón */
+.btn-carrito i {
+    margin-right: 8px; /* Separa un poquito el carrito del texto */
+}
+
+/* Hover del botón */
+.btn-carrito:hover {
+    background-color: #e67e22; /* Cambia a naranja al pasar el mouse */
+}
+/* --- ESTILOS PARA EL MENÚ DE NAVEGACIÓN (Actualizado con Flexbox) --- */
+
+nav {
+    background-color: #e67e22; /* Fondo del menú */
+    padding: 15px 0; /* Espacio arriba y abajo */
+}
+
+/* Aplicamos Flexbox a la lista */
+.nav-list {
+    list-style: none; /* Quitamos las viñetas */
+    margin: 0;
+    padding: 0;
+    
+    /* Magia de Flexbox: */
+    display: flex; 
+    justify-content: space-around; /* Distribuye los enlaces con espacio igual entre ellos */
+    align-items: center; /* Los centra verticalmente */
+}
+
+/* Los enlaces (<a>) dentro de la lista */
+.nav-list a {
+    text-decoration: none; /* Quitamos el subrayado */
+    color: white; /* Color del texto */
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 18px; /* Un poquito más grande para que se lea mejor */
+    transition: color 0.3s ease;
+}
+
+/* Efecto Hover */
+.nav-list a:hover {
+    color: #2c3e50; 
+}

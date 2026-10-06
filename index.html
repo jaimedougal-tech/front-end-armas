@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Primer Proyecto</title>
+    
+    <!-- traigo la fuente poppins de google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- iconos de fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header se usa para armar titulos y ahora le agrego un logo -->
+    <header>
+        <img src="pistola.png" alt="Logo de mi portal" width="150">
+        <h1>Mi Primer Proyecto</h1>
+    </header>
+
+    <!-- Nav es para armar menus -->
+    <nav>
+        <ul class="nav-list">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        
+        <section>
+            <h2>Creando mi portal</h2>
+            <p>Aca voy a poner el resto del contenido de mi pagina</p>
+
+            <video controls width="600">
+                <source src="M15.mp4" type="video/mp4">
+                <track src="subtitulos.vtt" kind="subtitles" srclang="es" label="Español">
+                Tu navegador no soporta la reproducción de este video.
+            </video>
+        </section>
+
+        <!-- Aca van las tarjetas de las armas -->
+        <section class="productos">
+            <h2>Nuestras Armas Destacadas</h2>
+            
+            <div class="contenedor-tarjetas">
+                <article class="tarjeta">
+                    <img src="pistola.png" alt="Pistola Táctica 9mm" class="img-producto">
+                    <h3>Pistola Táctica 9mm</h3>
+                    <p>Diseño compacto y ergonómico, ideal para defensa personal y tiro deportivo. Alta precisión.</p>
+                    <p class="precio">$550.00</p>
+                    <button class="btn-carrito"><i class="fas fa-shopping-cart"></i> Agregar al carrito</button>
+                </article>
+
+                <article class="tarjeta">
+                    <img src="rifle.png" alt="Rifle Semiautomático AR" class="img-producto">
+                    <h3>Rifle Semiautomático AR</h3>
+                    <p>Plataforma versátil con rieles para accesorios tácticos. Calibre 5.56 NATO. Incluye mira óptica.</p>
+                    <p class="precio">$1,200.00</p>
+                    <button class="btn-carrito"><i class="fas fa-shopping-cart"></i> Agregar al carrito</button>
+                </article>
+
+                <article class="tarjeta">
+                    <img src="escopeta.png" alt="Escopeta de Acción a Bomba" class="img-producto">
+                    <h3>Escopeta Táctica Cal. 12</h3>
+                    <p>Fiabilidad extrema en situaciones de defensa. Culata ajustable y capacidad de 7+1 cartuchos.</p>
+                    <p class="precio">$480.00</p>
+                    <button class="btn-carrito"><i class="fas fa-shopping-cart"></i> Agregar al carrito</button>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h2>Contacto</h2>
+            <!-- le pongo id al form para usarlo despues en el script -->
+            <form id="miformulario" action="https://formspree.io/f/TU_ID_DE_FORMSPREE" method="POST">
+                <div>
+                    <label for="nombre">Nombre:</label><br>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <br>
+                <div>
+                    <label for="email">Correo electrónico:</label><br>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <br>
+                <div>
+                    <label for="mensaje">Mensaje:</label><br>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                </div>
+                <br>
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Mensajes Recibidos</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Mensaje corto</th>
+                        <th>Estado del mensaje</th>
+                    </tr>
+                </thead>
+                
+                <tbody id="mitabla">
+                    <tr>
+                        <td colspan="4" style="text-align: center; background-color: #f0f0f0;">
+                            <strong>Mensajes pendientes de respuesta</strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Carlos Santana</td>
+                        <td>carlos@email.com</td>
+                        <td>Consulta sobre la pistola</td>
+                        <td>Pendiente</td>
+                    </tr>
+                    <tr>
+                        <td>Lucía Méndez</td>
+                        <td>lucia@email.com</td>
+                        <td>¿Tienen envíos al interior?</td>
+                        <td>Pendiente</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Footer es para poner el pie de página -->
+    <footer>
+        <p>Pagina creada por Jaime Dougall</p>
+        
+        <div class="redes-sociales">
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+    </footer>
+
+    <!-- armo un script para agregar los datos a la tabla -->
+    <script>
+        let form = document.getElementById('miformulario');
+        let tabla = document.getElementById('mitabla');
+
+        form.addEventListener('submit', function(evento) {
+            // esto frena que se mande a formspree para poder ver la tabla
+            evento.preventDefault(); 
+
+            let nom = document.getElementById('nombre').value;
+            let mail = document.getElementById('email').value;
+            let msj = document.getElementById('mensaje').value;
+
+            // armo la fila sumando el html y las variables
+            let fila_nueva = "<tr>" +
+                                "<td>" + nom + "</td>" +
+                                "<td>" + mail + "</td>" +
+                                "<td>" + msj + "</td>" +
+                                "<td>Pendiente</td>" +
+                             "</tr>";
+
+            // lo meto adentro del tbody
+            tabla.innerHTML = tabla.innerHTML + fila_nueva;
+
+            // limpio el form
+            form.reset();
+        });
+    </script>
+</body>
+</html>

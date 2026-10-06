@@ -1,0 +1,1 @@
+Se trata de una pagina para los amantes de las armas donde pueden ver videos, consultar informacion de los productos, comprar armas y ver donde estamos hubicados.
